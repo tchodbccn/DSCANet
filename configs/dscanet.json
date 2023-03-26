@@ -1,0 +1,329 @@
+{
+  "entrymodule": {
+    "conv1": {
+      "inchannels": 3,
+      "outchannels": 32,
+      "kernelsize": 3,
+      "stride": 2,
+      "padding": 0,
+      "bias": true,
+      "norm": true,
+      "active": "relu"
+    },
+    "conv2": {
+      "inchannels": 32,
+      "outchannels": 64,
+      "kernelsize": 3,
+      "stride": 1,
+      "padding": 0,
+      "bias": true,
+      "norm": true,
+      "active": "relu"
+    }
+  },
+  "module1":{
+    "reluFirst": false,
+    "part": ["dp1","dp2","maxpool","attention"],
+    "dp1":{
+      "type": "dp",
+      "dwinchannels": 64,
+      "dwoutchannels": 64,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 128,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp2":{
+      "type": "dp",
+      "dwinchannels": 128,
+      "dwoutchannels": 128,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 128,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "none"
+    },
+    "maxpool":{
+      "type": "maxpool",
+      "kerneksize": 3,
+      "stride": 2,
+      "padding": 1
+    },
+    "attention": {
+      "type": "attention",
+      "channelscount": 128,
+      "hideuintscount": 32
+    },
+    "res": true,
+    "resparams": {
+      "inchannels":64,
+      "out_channels":128,
+      "kerneksize": 1,
+      "stride": 2,
+      "padding": 0
+    }
+  },
+  "module2":{
+    "reluFirst": true,
+    "part": ["dp1","dp2","maxpool","attention"],
+    "dp1":{
+      "type": "dp",
+      "dwinchannels": 128,
+      "dwoutchannels": 128,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 256,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp2":{
+      "type": "dp",
+      "dwinchannels": 256,
+      "dwoutchannels": 256,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 256,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "none"
+    },
+    "maxpool":{
+      "type": "maxpool",
+      "kerneksize": 3,
+      "stride": 2,
+      "padding": 1
+    },
+    "attention": {
+      "type": "attention",
+      "channelscount": 256,
+      "hideuintscount": 64
+    },
+    "res": true,
+    "resparams": {
+      "inchannels":128,
+      "out_channels":256,
+      "kerneksize": 1,
+      "stride": 2,
+      "padding": 0
+    }
+  },
+  "module3":{
+    "reluFirst": true,
+    "part": ["dp1","dp2","maxpool","attention"],
+    "dp1":{
+      "type": "dp",
+      "dwinchannels": 256,
+      "dwoutchannels": 256,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 728,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp2":{
+      "type": "dp",
+      "dwinchannels": 728,
+      "dwoutchannels": 728,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 728,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "none"
+    },
+    "maxpool":{
+      "type": "maxpool",
+      "kerneksize": 3,
+      "stride": 2,
+      "padding": 1
+    },
+    "attention": {
+      "type": "attention",
+      "channelscount": 728,
+      "hideuintscount": 182
+    },
+    "res": true,
+    "resparams": {
+      "inchannels":256,
+      "out_channels":728,
+      "kerneksize": 1,
+      "stride": 2,
+      "padding": 0
+    }
+  },
+  "module4_11":{
+    "reluFirst": true,
+    "part": ["dp1","dp2","dp3","attention"],
+    "dp1":{
+      "type": "dp",
+      "dwinchannels": 728,
+      "dwoutchannels": 728,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 728,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp2":{
+      "type": "dp",
+      "dwinchannels": 728,
+      "dwoutchannels": 728,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 728,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp3":{
+      "type": "dp",
+      "dwinchannels": 728,
+      "dwoutchannels": 728,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 728,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "none"
+    },
+    "attention": {
+      "type": "attention",
+      "channelscount": 728,
+      "hideuintscount": 182
+    },
+    "res": true,
+    "resparams": {
+      "inchannels":728,
+      "out_channels":728,
+      "kerneksize": 1,
+      "stride": 1,
+      "padding": 0
+    }
+  },
+  "module12":{
+    "reluFirst": true,
+    "part": ["dp1","dp2","maxpool","attention"],
+    "dp1":{
+      "type": "dp",
+      "dwinchannels": 1456,
+      "dwoutchannels": 728,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 728,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp2":{
+      "type": "dp",
+      "dwinchannels": 728,
+      "dwoutchannels": 728,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 1024,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "none"
+    },
+    "maxpool":{
+      "type": "maxpool",
+      "kerneksize": 3,
+      "stride": 2,
+      "padding": 1
+    },
+    "attention": {
+      "type": "attention",
+      "channelscount": 1024,
+      "hideuintscount": 256
+    },
+    "res": true,
+    "resparams": {
+      "inchannels":1456,
+      "out_channels":1024,
+      "kerneksize": 1,
+      "stride": 2,
+      "padding": 0
+    }
+  },
+  "module13":{
+    "reluFirst": false,
+    "part": ["dp1","dp2","gavgpool"],
+    "dp1":{
+      "type": "dp",
+      "dwinchannels": 1024,
+      "dwoutchannels": 1024,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 1536,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "dp2":{
+      "type": "dp",
+      "dwinchannels": 1536,
+      "dwoutchannels": 1536,
+      "dwkernelsize": 3,
+      "dwstride": 1,
+      "dwpadding": 1,
+      "convoutchannels": 2048,
+      "convkernelsize": 1,
+      "convstride": 1,
+      "convpadding": 0,
+      "bn": true,
+      "active": "relu"
+    },
+    "gavgpool":{
+      "type": "gavgpool"
+    },
+    "res": false
+  },
+  "classification": {
+    "inChannels":2048,
+    "hideUnits":512,
+    "outChannels":8,
+    "active":"relu"
+  }
+}

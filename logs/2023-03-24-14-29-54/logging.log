@@ -1,0 +1,74 @@
+start time：2023-03-24-14-29-54
+随机种子设置为:1024
+Load Dataset Shipsear - Train Mode
+The category and quantity of image samples loaded are：
+ClassId = 2, pics count = 2400
+ClassId = 5, pics count = 2400
+ClassId = 3, pics count = 2400
+ClassId = 1, pics count = 2400
+ClassId = 7, pics count = 2400
+ClassId = 6, pics count = 2400
+ClassId = 8, pics count = 2400
+ClassId = 4, pics count = 2400
+Load Dataset Shipsear - Validation Mode
+The category and quantity of image samples loaded are：
+ClassId = 2, pics count = 800
+ClassId = 5, pics count = 800
+ClassId = 3, pics count = 800
+ClassId = 1, pics count = 800
+ClassId = 7, pics count = 800
+ClassId = 6, pics count = 800
+ClassId = 8, pics count = 800
+ClassId = 4, pics count = 800
+Load Dataset Shipsear - Test Mode
+The category and quantity of image samples loaded are：
+ClassId = 2, pics count = 800
+ClassId = 5, pics count = 800
+ClassId = 3, pics count = 800
+ClassId = 1, pics count = 800
+ClassId = 7, pics count = 800
+ClassId = 6, pics count = 800
+ClassId = 8, pics count = 800
+ClassId = 4, pics count = 800
+Load the training set, verification set, and test set
+Load loss function：crossentropy
+Load net：DSCANet.Dscanet
+Number of model parameters: 48.35M
+optimizer：sgd
+Learning rate decay strategy：poly
+Device：gpu
+lr：0.01,optim：sgd，batchsize：64， weight decay：0.0001，momentum：0.9，lr strategy：poly，max epoch：100
+[epoch 0], [iter 1 / 300], [train main loss 2.078100], [lr 0.010000] [batchtime 6.93]
+[epoch 0], [iter 2 / 300], [train main loss 2.080819], [lr 0.010000] [batchtime 0.45]
+[epoch 0], [iter 3 / 300], [train main loss 2.080151], [lr 0.010000] [batchtime 0.452]
+[epoch 0], [iter 4 / 300], [train main loss 2.080382], [lr 0.010000] [batchtime 0.451]
+[epoch 0], [iter 5 / 300], [train main loss 2.080604], [lr 0.010000] [batchtime 0.457]
+[epoch 0], [iter 6 / 300], [train main loss 2.080480], [lr 0.010000] [batchtime 0.451]
+[epoch 0], [iter 7 / 300], [train main loss 2.080326], [lr 0.010000] [batchtime 0.453]
+[epoch 0], [iter 8 / 300], [train main loss 2.080141], [lr 0.010000] [batchtime 0.452]
+[epoch 0], [iter 9 / 300], [train main loss 2.079810], [lr 0.010000] [batchtime 0.453]
+[epoch 0], [iter 10 / 300], [train main loss 2.079764], [lr 0.010000] [batchtime 0.453]
+[epoch 0], [iter 11 / 300], [train main loss 2.079529], [lr 0.010000] [batchtime 0.453]
+[epoch 0], [iter 12 / 300], [train main loss 2.079337], [lr 0.010000] [batchtime 0.454]
+[epoch 0], [iter 13 / 300], [train main loss 2.079359], [lr 0.010000] [batchtime 0.452]
+[epoch 0], [iter 14 / 300], [train main loss 2.079397], [lr 0.010000] [batchtime 0.454]
+[epoch 0], [iter 15 / 300], [train main loss 2.079121], [lr 0.010000] [batchtime 0.456]
+[epoch 0], [iter 16 / 300], [train main loss 2.079278], [lr 0.010000] [batchtime 0.452]
+[epoch 0], [iter 17 / 300], [train main loss 2.079348], [lr 0.010000] [batchtime 0.453]
+[epoch 0], [iter 18 / 300], [train main loss 2.079331], [lr 0.010000] [batchtime 0.455]
+[epoch 0], [iter 19 / 300], [train main loss 2.079288], [lr 0.010000] [batchtime 0.457]
+[epoch 0], [iter 20 / 300], [train main loss 2.079038], [lr 0.010000] [batchtime 0.457]
+[epoch 0], [iter 21 / 300], [train main loss 2.078839], [lr 0.010000] [batchtime 0.455]
+[epoch 0], [iter 22 / 300], [train main loss 2.078855], [lr 0.010000] [batchtime 0.455]
+[epoch 0], [iter 23 / 300], [train main loss 2.078735], [lr 0.010000] [batchtime 0.458]
+[epoch 0], [iter 24 / 300], [train main loss 2.078681], [lr 0.010000] [batchtime 0.456]
+[epoch 0], [iter 25 / 300], [train main loss 2.078773], [lr 0.010000] [batchtime 0.455]
+[epoch 0], [iter 26 / 300], [train main loss 2.078829], [lr 0.010000] [batchtime 0.455]
+[epoch 0], [iter 27 / 300], [train main loss 2.078934], [lr 0.010000] [batchtime 0.459]
+[epoch 0], [iter 28 / 300], [train main loss 2.078672], [lr 0.010000] [batchtime 0.454]
+[epoch 0], [iter 29 / 300], [train main loss 2.078695], [lr 0.010000] [batchtime 0.453]
+[epoch 0], [iter 30 / 300], [train main loss 2.078530], [lr 0.010000] [batchtime 0.455]
+[epoch 0], [iter 31 / 300], [train main loss 2.078518], [lr 0.010000] [batchtime 0.457]
+[epoch 0], [iter 32 / 300], [train main loss 2.078474], [lr 0.010000] [batchtime 0.464]
+[epoch 0], [iter 33 / 300], [train main loss 2.078397], [lr 0.010000] [batchtime 0.459]
+[epoch 0], [iter 34 / 300], [train main loss 2.078229], [lr 0.010000] [batchtime 0.458]

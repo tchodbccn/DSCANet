@@ -1,0 +1,42 @@
+{
+  "description": "DSCANet",
+
+  "arch": "DSCANet.Dscanet",
+
+  "seed": 1024,
+
+   "components": {
+     "optimizer": "sgd",
+     "lossfun": "crossentropy",
+     "device": "gpu"
+   },
+
+  "dataset": {
+    "name": "shipsear",
+    "root": "/home/liubing/workdir6/selects_by_pro_randomcrop",
+    "num_workers": 4,
+    "classes_num": 8
+  },
+
+   "Hyperparameter": {
+     "lr": 0.01,
+     "lr_schedule": "poly",
+     "lr_fixed": false,
+     "poly_exp": 0.5,
+     "poly_step": 110,
+     "rescale": 1.0,
+     "momentum": 0.9,
+     "max_epoch": 100,
+     "batch_size": 64,
+     "weight_decay": 1e-4
+   },
+
+  "trainprocess": {
+    "start_epoch": 0,
+    "val_freq": 1,
+    "stopWhenConvergence": false,
+    "lossNoChangesCount": 200,
+    "errRange": 0.00001
+  }
+
+}
